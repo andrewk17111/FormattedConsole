@@ -142,6 +142,6 @@ public static class ANSIConsole
                 continue;
         }
 
-        return $"ESC[{String.Join(";", tags)}m";
+        return $"\u001b[{String.Join(";", tags)}m";
     }
 }
