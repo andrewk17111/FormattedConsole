@@ -115,6 +115,12 @@ public static class ANSIConsole
     public static string[] FORMAT_TAGS
         => ANSI_CODES.Keys.ToArray();
 
+    public static void Write(string text)
+        => Console.Write(FormatString(text));
+
+    public static void WriteLine(string text)
+        => Console.WriteLine(FormatString(text));
+
     /// <summary>
     /// Replaces format tags with their corresponding ANSI escape codes.
     /// </summary>
