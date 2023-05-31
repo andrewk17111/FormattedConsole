@@ -115,9 +115,18 @@ public static class ANSIConsole
     public static string[] FORMAT_TAGS
         => ANSI_CODES.Keys.ToArray();
 
+    /// <summary>
+    /// Writes the specified string value, formatted using format tags to the standard output stream.
+    /// </summary>
+    /// <param name="text">The string to be written.</param>
     public static void Write(string text)
         => Console.Write(FormatString(text));
 
+    /// <summary>
+    /// Writes the specified string value, formatted using format tags, followed by the current line terminator, to the
+    /// standard output stream.
+    /// </summary>
+    /// <param name="text">The string to be written.</param>
     public static void WriteLine(string text)
         => Console.WriteLine(FormatString(text));
 
